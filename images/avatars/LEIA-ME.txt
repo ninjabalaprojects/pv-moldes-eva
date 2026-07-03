@@ -1,0 +1,14 @@
+PASTA DE AVATARES DOS DEPOIMENTOS
+===================================
+Coloque aqui as fotos de perfil de cada pessoa que deu depoimento.
+
+Nomeie os arquivos assim:
+  cassia.jpg         → Cassia Margarethe
+  sthefany.jpg       → Sthefany Rodrigues
+  maria-cristina.jpg → María Cristina Amaral
+  silvania.jpg       → Silvania Marques
+  nivaldete.jpg      → Nivaldete Barros
+  rose.jpg           → Rose NCoelho
+
+Formatos aceitos: JPG, PNG, WEBP
+Tamanho recomendado: 80x80 px (quadrado)

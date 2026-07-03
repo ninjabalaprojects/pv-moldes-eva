@@ -1,0 +1,14 @@
+PASTA DE FOTOS DE MOLDES DOS DEPOIMENTOS
+=========================================
+Coloque aqui as fotos das peças de EVA feitas por cada cliente.
+
+Nomeie os arquivos assim:
+  molde-cassia.jpg         → Foto da peça de Cassia Margarethe
+  molde-sthefany.jpg       → Foto da peça de Sthefany Rodrigues
+  molde-maria-cristina.jpg → Foto da peça de María Cristina Amaral
+  molde-silvania.jpg       → Foto da peça de Silvania Marques
+  molde-nivaldete.jpg      → Foto da peça de Nivaldete Barros
+  molde-rose.jpg           → Foto da peça de Rose NCoelho
+
+Formatos aceitos: JPG, PNG, WEBP
+Tamanho recomendado: 300x300 px mínimo

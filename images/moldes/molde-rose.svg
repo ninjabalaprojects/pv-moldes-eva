@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><defs><radialGradient id="bg" cx="50%" cy="40%" r="70%"><stop offset="0%" stop-color="#fdf2f8"/><stop offset="100%" stop-color="#fce7f3"/></radialGradient><radialGradient id="p" cx="35%" cy="30%" r="80%"><stop offset="0%" stop-color="#fda4af"/><stop offset="100%" stop-color="#db2777"/></radialGradient><radialGradient id="p2" cx="35%" cy="30%" r="80%"><stop offset="0%" stop-color="#c4b5fd"/><stop offset="100%" stop-color="#7c3aed"/></radialGradient></defs>
+<rect width="400" height="300" fill="url(#bg)"/>
+<circle cx="30" cy="30" r="8" fill="#fbcfe8"/><circle cx="370" cy="30" r="8" fill="#fbcfe8"/><circle cx="30" cy="270" r="8" fill="#fbcfe8"/><circle cx="370" cy="270" r="8" fill="#fbcfe8"/>
+<circle cx="80" cy="60" r="5" fill="#f9a8d4" opacity=".7"/><circle cx="320" cy="60" r="5" fill="#f9a8d4" opacity=".7"/>
+<!-- Festa decorations: 2 flowers + star -->
+<!-- Flower left -->
+<rect x="108" y="192" width="5" height="48" rx="2.5" fill="#4ade80"/>
+<ellipse cx="105" cy="216" rx="12" ry="6" fill="#22c55e" transform="rotate(-35 105 216)"/>
+<ellipse cx="110" cy="108" rx="15" ry="26" fill="url(#p)" opacity=".9"/>
+<ellipse cx="110" cy="108" rx="15" ry="26" fill="url(#p)" opacity=".85" transform="rotate(60 110 152)"/>
+<ellipse cx="110" cy="108" rx="15" ry="26" fill="url(#p)" opacity=".85" transform="rotate(120 110 152)"/>
+<ellipse cx="110" cy="108" rx="15" ry="26" fill="url(#p)" opacity=".85" transform="rotate(180 110 152)"/>
+<ellipse cx="110" cy="108" rx="15" ry="26" fill="url(#p)" opacity=".85" transform="rotate(240 110 152)"/>
+<ellipse cx="110" cy="108" rx="15" ry="26" fill="url(#p)" opacity=".85" transform="rotate(300 110 152)"/>
+<circle cx="110" cy="152" r="18" fill="#fbbf24"/><circle cx="110" cy="152" r="11" fill="#fde68a"/><circle cx="105" cy="148" r="4" fill="rgba(255,255,255,.4)"/>
+<!-- Flower right purple -->
+<rect x="287" y="192" width="5" height="48" rx="2.5" fill="#4ade80"/>
+<ellipse cx="295" cy="216" rx="12" ry="6" fill="#16a34a" transform="rotate(35 295 216)"/>
+<ellipse cx="290" cy="108" rx="15" ry="26" fill="url(#p2)" opacity=".9"/>
+<ellipse cx="290" cy="108" rx="15" ry="26" fill="url(#p2)" opacity=".85" transform="rotate(60 290 152)"/>
+<ellipse cx="290" cy="108" rx="15" ry="26" fill="url(#p2)" opacity=".85" transform="rotate(120 290 152)"/>
+<ellipse cx="290" cy="108" rx="15" ry="26" fill="url(#p2)" opacity=".85" transform="rotate(180 290 152)"/>
+<ellipse cx="290" cy="108" rx="15" ry="26" fill="url(#p2)" opacity=".85" transform="rotate(240 290 152)"/>
+<ellipse cx="290" cy="108" rx="15" ry="26" fill="url(#p2)" opacity=".85" transform="rotate(300 290 152)"/>
+<circle cx="290" cy="152" r="18" fill="#fbbf24"/><circle cx="290" cy="152" r="11" fill="#fde68a"/><circle cx="285" cy="148" r="4" fill="rgba(255,255,255,.4)"/>
+<!-- Star center -->
+<polygon points="200,100 211,134 248,134 219,155 230,189 200,168 170,189 181,155 152,134 189,134" fill="url(#p)" opacity=".88"/>
+<circle cx="200" cy="148" r="18" fill="#fbbf24"/><circle cx="200" cy="148" r="11" fill="#fde68a"/><circle cx="195" cy="143" r="4" fill="rgba(255,255,255,.4)"/>
+<rect x="100" y="262" width="200" height="26" rx="13" fill="rgba(219,39,119,.1)"/>
+<text x="200" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#db2777">Pieza de EVA · Rose N.</text>
+</svg>
