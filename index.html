@@ -1169,7 +1169,7 @@
           Garantía de 7 días
         </li>
       </ul>
-      <a href="#" class="btn-plan basic-btn" onclick="openUpsell(event)">Garantizar Mi Acceso Ahora</a>
+      <a href="#" class="btn-plan basic-btn" onclick="openUpsell(event)" data-checkout="https://buy.stripe.com/6oU9AUbZ0dLt0AF5hZcIE02">Garantizar Mi Acceso Ahora</a>
     </div>
 
     <!-- PREMIUM -->
@@ -1213,7 +1213,7 @@
           1.500 moldes variados adicionales
         </li>
       </ul>
-      <a href="#" class="btn-plan premium-btn">Garantizar Mi Acceso</a>
+      <a href="https://buy.stripe.com/dRm7sM9QS6j16Z39yfcIE00" class="btn-plan premium-btn" target="_blank" rel="noopener">Garantizar Mi Acceso</a>
     </div>
 
   </div>
@@ -2121,10 +2121,10 @@
 
       <!-- CTAs -->
       <div class="upsell-actions">
-        <a href="#" id="upsell-accept" class="upsell-btn-accept">
+        <a href="https://buy.stripe.com/dRmbJ22oq7n5837dOvcIE01" id="upsell-accept" class="upsell-btn-accept" target="_blank" rel="noopener">
           Quiero el Plan Premium con descuento
         </a>
-        <button onclick="closeUpsell()" class="upsell-btn-reject">
+        <button onclick="closeUpsell();window.open('https://buy.stripe.com/6oU9AUbZ0dLt0AF5hZcIE02','_blank')" class="upsell-btn-reject">
           Continuar solo con el Plan Básico
         </button>
       </div>
