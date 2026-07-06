@@ -2481,6 +2481,34 @@
   }
 </script>
 
+<!-- Passa UTMs da URL para todos os links de checkout Stripe -->
+<script>
+(function() {
+  var UTM_KEYS = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','utm_id','sck','src'];
+  var params = new URLSearchParams(window.location.search);
+
+  var utmString = UTM_KEYS
+    .filter(function(k) { return params.get(k); })
+    .map(function(k) { return encodeURIComponent(k) + '=' + encodeURIComponent(params.get(k)); })
+    .join('&');
+
+  if (!utmString) return;
+
+  // Atualiza todos os href dos links Stripe
+  document.querySelectorAll('a[href*="buy.stripe.com"]').forEach(function(a) {
+    a.href = a.href + (a.href.indexOf('?') >= 0 ? '&' : '?') + utmString;
+  });
+
+  // Intercepta window.open para links Stripe (botão rejeitar upsell)
+  var _open = window.open.bind(window);
+  window.open = function(url, target, features) {
+    if (url && url.indexOf('buy.stripe.com') >= 0) {
+      url = url + (url.indexOf('?') >= 0 ? '&' : '?') + utmString;
+    }
+    return _open(url, target, features);
+  };
+})();
+</script>
 
 </body>
 </html>
