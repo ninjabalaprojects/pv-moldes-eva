@@ -5,19 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title>Kit de Moldes de Goma EVA – Más de 2.000 Moldes</title>
   <meta name="description" content="El kit con más de 2.000 moldes de goma eva está siendo liberado por solo $3,99. Acceso inmediato.">
-  <!-- Meta Pixel -->
+  <!-- Utmify Pixel -->
   <script>
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-  document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init','788912363738648');
-  fbq('track','PageView');
+  window.pixelId = "6a4b0bebafd7e929f25c0189";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=788912363738648&ev=PageView&noscript=1"/></noscript>
-  <!-- End Meta Pixel -->
+  <!-- End Utmify Pixel -->
   <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
   <link rel="preload" href="https://scripts.converteai.net/29f9c03e-6192-4476-9f33-ccf0b7631e12/players/6a4838398c5e22471a9cb6d3/v4/player.js" as="script">
   <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
@@ -2484,85 +2481,6 @@
   }
 </script>
 
-<!-- Meta Conversions API + event tracking -->
-<script>
-(function() {
-  var PIXEL_ID = '788912363738648';
-  var CAPI_TOKEN = 'EAAS37tZBk86EBRZBYdhBanxPtd7zzifQiOOJQln5Ra1vGQQlz6Tx83EmunwCwIZAW868XNpb8U0CcQRq1g46ZA4p7KgLyFkZCox1RmuXXZCVXCei6sgQ5zRKSEz3LoztvqTABZCcCPJn3wyNA4gYqUc0MMVJEEoLJknCNN864L6LBeosOXZBYaUYEWSYXUzdZCk9JKwZDZD';
-
-  function getCookie(name) {
-    var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
-    return match ? decodeURIComponent(match[1]) : undefined;
-  }
-
-  function sendCAPI(eventName, customData) {
-    var payload = {
-      data: [{
-        event_name: eventName,
-        event_time: Math.floor(Date.now() / 1000),
-        action_source: 'website',
-        event_source_url: window.location.href,
-        user_data: {
-          client_user_agent: navigator.userAgent,
-          fbp: getCookie('_fbp') || '',
-          fbc: getCookie('_fbc') || ''
-        }
-      }]
-    };
-    if (customData) payload.data[0].custom_data = customData;
-    fetch('https://graph.facebook.com/v19.0/' + PIXEL_ID + '/events?access_token=' + CAPI_TOKEN, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    }).catch(function(){});
-  }
-
-  // PageView via CAPI
-  sendCAPI('PageView');
-
-  // ViewContent quando a seção de planos fica visível
-  var offerEl = document.querySelector('.plans-section') || document.querySelector('.vsl-section');
-  if (offerEl && 'IntersectionObserver' in window) {
-    var vcFired = false;
-    var obs = new IntersectionObserver(function(entries) {
-      if (!vcFired && entries[0].isIntersecting) {
-        vcFired = true;
-        fbq('track', 'ViewContent', { content_name: 'Kit Moldes EVA' });
-        sendCAPI('ViewContent', { content_name: 'Kit Moldes EVA' });
-        obs.disconnect();
-      }
-    }, { threshold: 0.3 });
-    obs.observe(offerEl);
-  }
-
-  // InitiateCheckout em todos os botões de checkout
-  function trackCheckout(e) {
-    var el = e.currentTarget;
-    var value = el.classList.contains('premium-btn') ? 9.90 : 3.99;
-    fbq('track', 'InitiateCheckout', { value: value, currency: 'USD' });
-    sendCAPI('InitiateCheckout', { value: value, currency: 'USD' });
-  }
-
-  // Upsell accept
-  function trackUpsellCheckout(e) {
-    fbq('track', 'InitiateCheckout', { value: 6.97, currency: 'USD' });
-    sendCAPI('InitiateCheckout', { value: 6.97, currency: 'USD' });
-  }
-
-  document.querySelectorAll('.btn-plan').forEach(function(btn) {
-    btn.addEventListener('click', trackCheckout);
-  });
-
-  var upsellAccept = document.getElementById('upsell-accept');
-  if (upsellAccept) upsellAccept.addEventListener('click', trackUpsellCheckout);
-
-  var upsellReject = document.querySelector('.upsell-btn-reject');
-  if (upsellReject) upsellReject.addEventListener('click', function() {
-    fbq('track', 'InitiateCheckout', { value: 3.99, currency: 'USD' });
-    sendCAPI('InitiateCheckout', { value: 3.99, currency: 'USD' });
-  });
-})();
-</script>
 
 </body>
 </html>
