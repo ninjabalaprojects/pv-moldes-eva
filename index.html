@@ -1179,7 +1179,7 @@
           Garantía de 7 días
         </li>
       </ul>
-      <a href="#" class="btn-plan basic-btn" onclick="openUpsell(event)" data-checkout="https://buy.stripe.com/6oU9AUbZ0dLt0AF5hZcIE02">Garantizar Mi Acceso Ahora</a>
+      <a href="#" class="btn-plan basic-btn" onclick="openUpsell(event)" data-checkout="https://pay.kiwify.com/LFJUEd5">Garantizar Mi Acceso Ahora</a>
     </div>
 
     <!-- PREMIUM -->
@@ -1189,7 +1189,7 @@
       <p class="plan-old-price">De $29,90</p>
       <div class="plan-price">
         <span class="label">Por solo:</span><br>
-        <span class="amount">$9<span class="cents">,90</span></span><br>
+        <span class="amount">$8<span class="cents">,97</span></span><br>
         <span class="period">pago único</span>
       </div>
       <span class="plan-savings">Economiza $20,00</span>
@@ -1223,7 +1223,7 @@
           1.500 moldes variados adicionales
         </li>
       </ul>
-      <a href="https://buy.stripe.com/dRm7sM9QS6j16Z39yfcIE00" class="btn-plan premium-btn" target="_blank" rel="noopener">Garantizar Mi Acceso</a>
+      <a href="https://pay.kiwify.com/JxzcqHv" class="btn-plan premium-btn" target="_blank" rel="noopener">Garantizar Mi Acceso</a>
     </div>
 
   </div>
@@ -2110,7 +2110,7 @@
       <!-- Offer card -->
       <div class="upsell-offer-card">
         <p class="upsell-offer-text">
-          Por solo <strong class="upsell-price-new">US$ 6,97</strong> <span class="upsell-price-old">(en lugar de US$ 9,90)</span>, puedes desbloquear el <strong>Plan Premium</strong>, que incluye:
+          Por solo <strong class="upsell-price-new">US$ 6,97</strong> <span class="upsell-price-old">(en lugar de US$ 8,97)</span>, puedes desbloquear el <strong>Plan Premium</strong>, que incluye:
         </p>
         <ul class="upsell-features">
           <li><span class="upsell-check">✓</span> Más moldes exclusivos</li>
@@ -2131,10 +2131,10 @@
 
       <!-- CTAs -->
       <div class="upsell-actions">
-        <a href="https://buy.stripe.com/dRmbJ22oq7n5837dOvcIE01" id="upsell-accept" class="upsell-btn-accept" target="_blank" rel="noopener">
+        <a href="https://pay.kiwify.com/mzHRSCV" id="upsell-accept" class="upsell-btn-accept" target="_blank" rel="noopener">
           Quiero el Plan Premium con descuento
         </a>
-        <button onclick="closeUpsell();window.open('https://buy.stripe.com/6oU9AUbZ0dLt0AF5hZcIE02','_blank')" class="upsell-btn-reject">
+        <button onclick="closeUpsell();window.open('https://pay.kiwify.com/LFJUEd5','_blank')" class="upsell-btn-reject">
           Continuar solo con el Plan Básico
         </button>
       </div>
@@ -2495,14 +2495,14 @@
   if (!utmString) return;
 
   // Atualiza todos os href dos links Stripe
-  document.querySelectorAll('a[href*="buy.stripe.com"]').forEach(function(a) {
+  document.querySelectorAll('a[href*="pay.kiwify.com"]').forEach(function(a) {
     a.href = a.href + (a.href.indexOf('?') >= 0 ? '&' : '?') + utmString;
   });
 
   // Intercepta window.open para links Stripe (botão rejeitar upsell)
   var _open = window.open.bind(window);
   window.open = function(url, target, features) {
-    if (url && url.indexOf('buy.stripe.com') >= 0) {
+    if (url && url.indexOf('pay.kiwify.com') >= 0) {
       url = url + (url.indexOf('?') >= 0 ? '&' : '?') + utmString;
     }
     return _open(url, target, features);
